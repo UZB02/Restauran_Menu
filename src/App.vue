@@ -6,7 +6,7 @@ import Nav from "./components/Nav/Main.vue";
 <template>
    <header class="sticky top-0 bg-white z-[10]">
     <nav
-      class="sticky top-0 px-4  flex justify-between items-center border-b"
+      class="sticky top-0 px-4 flex justify-between items-center border-b"
     >
       <div class="container mx-0">
         <Nav></Nav>

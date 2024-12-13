@@ -57,7 +57,7 @@ const data=[
 
 <template>
     <section class="w-full">
-        <div class="container flex flex-col justify-center gap-2 mx-auto my-0 py-5 xs:px-5  px-8">
+        <div class="container flex flex-col justify-center gap-2 mx-auto my-0 py-5 xs:px-10  px-8">
             <div>
                 <h1 class="text-2xl font-bold">Kombo</h1>
             </div>
