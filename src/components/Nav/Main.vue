@@ -1,7 +1,7 @@
 <template>
   <div class="container  flex mx-auto justify-between items-center">
     <RouterLink to="/" class="text-3xl font-bold leading-none">
-      <img class="w-24" src="../../img/logo.png" alt="" />
+      <img class="w-24" src="https://i.pinimg.com/736x/38/fa/18/38fa18f2bb82b1ced249d170436fd333.jpg" alt="" />
     </RouterLink>
     <div class="flex lg:py-8 py-4 flex-row-reverse">
       <div class="lg:hidden">
