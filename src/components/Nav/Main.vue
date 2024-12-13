@@ -20,7 +20,7 @@
         <li>
           <RouterLink
             to="/"
-            class="text-sm text-white rounded-2xl bg-green-500 px-5 py-2  hover:text-green-600"
+            class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Kombo</RouterLink
           >
@@ -28,7 +28,7 @@
         
         <li>
           <RouterLink
-            to="/"
+            to="/pitsa"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Pitsa</RouterLink
@@ -37,7 +37,7 @@
         
         <li>
           <RouterLink
-            to="/"
+            to="/snack"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Gazaklar</RouterLink
@@ -45,7 +45,7 @@
         </li>
         <li>
           <RouterLink
-            to="/"
+            to="/drinks"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Ichimliklar</RouterLink
@@ -54,7 +54,7 @@
         
         <li>
           <RouterLink
-            to="/"
+            to="/salads"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Salatlar</RouterLink
@@ -63,7 +63,7 @@
         
         <li>
           <RouterLink
-            to="/"
+            to="/desserts"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Desertlar</RouterLink
@@ -72,7 +72,7 @@
         
         <li>
           <RouterLink
-            to="/"
+            to="/sauces"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Souslar</RouterLink
@@ -80,12 +80,7 @@
         </li>
         
         <li>
-          <RouterLink
-            to="/"
-            class="text-sm flex items-center justify-center gap-2 rounded-2xl bg-black text-white px-5 py-2  hover:text-white hover:bg-slate-900"
-            @click="closeMenu"
-            >Yoqtirilganlar<span class="flex items-center justify-center">0</span></RouterLink
-          >
+          
         </li>
         <!-- Add other menu items similarly -->
       </ul>
@@ -119,21 +114,21 @@
       <div>
         <ul class="flex flex-col gap-3">
           <li class="mb-1">
-              <span to="/" class="text-3xl font-bold leading-none">
+              <!-- <span to="/" class="text-3xl font-bold leading-none">
       <img class="w-24" src="https://i.pinimg.com/736x/38/fa/18/38fa18f2bb82b1ced249d170436fd333.jpg" alt="" />
-    </span>
+    </span> -->
           </li>
           <li class="mb-1 ">
              <RouterLink
             to="/"
-            class="text-sm w-full block text-center text-white rounded-2xl bg-green-500 px-5 py-2  hover:text-green-600"
+            class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Kombo</RouterLink
             >
           </li>
           <li class="mb-1">
             <RouterLink
-            to="/"
+            to="/pitsa"
             class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Pitsa</RouterLink
@@ -141,35 +136,35 @@
           </li>
           <li class="mb-1">
            <RouterLink
-            to="/"
+            to="/snack"
             class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Gazaklar</RouterLink>
           </li>
           <li class="mb-1">
             <RouterLink
-            to="/"
+            to="/drinks"
             class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Ichimliklar</RouterLink>
           </li>
           <li class="mb-1">
             <RouterLink
-            to="/"
+            to="/salads"
             class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Salatlar</RouterLink>
           </li>
           <li class="mb-1">
             <RouterLink
-            to="/"
+            to="/desserts"
             class="text-sm w-full block text-center  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Desertlar</RouterLink>
           </li>
           <li class="mb-1">
             <RouterLink
-            to="/"
+            to="/sauces"
             class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Souslar</RouterLink>
