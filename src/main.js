@@ -1,5 +1,6 @@
 import './assets/main.css'
 import { MotionPlugin } from "@vueuse/motion";
+import { useMotion } from "@vueuse/motion";
 
 import { createApp } from 'vue'
 import App from './App.vue'
