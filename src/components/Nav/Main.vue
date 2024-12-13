@@ -175,7 +175,6 @@
           <li class="mb-1">
             <button
               class="lg:inline-block w-full py-2 px-6 bg-black hover:bg-slate-900 text-sm text-white font-bold rounded-xl transition duration-200"
-              @click="redirectToPhoneNumber()"
             >
               Yoqtirilganlar | 0
             </button>
@@ -223,10 +222,5 @@ onMounted(() => {
     backdrop.addEventListener("click", closeMenu);
   }
 });
-
-function redirectToPhoneNumber() {
-  const phoneNumber = "+998917622603";
-  window.location.href = `tel:${phoneNumber}`;
-}
 </script>
 <style></style>
