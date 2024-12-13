@@ -11,7 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
-      "@vueuse/motion": "@vueuse/motion",
+      "@vueuse/motion": require.resolve("@vueuse/motion"),
     },
   },
   build: {
