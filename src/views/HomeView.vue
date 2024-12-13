@@ -62,7 +62,7 @@ const data=[
                 <h1 class="text-2xl font-bold">Kombo</h1>
             </div>
             <div class="grid md:grid-cols-3 lg:grid-cols-5 xs:grid-cols-2 grid-cols-1 gap-4">
-                <RouterLink v-for="item in data" to="/" class="bg-white shadow rounded px-2 py-4">
+                <RouterLink v-motion-pop-visible v-for="item in data" to="/" class="bg-white shadow rounded px-2 py-4">
                     <img class="w-full" :src="item.image" alt="Kombo">
                     <h2 class="font-bold text-xl">{{item.name}}</h2>
                     <p class="text-sm">{{item.description}}</p>
