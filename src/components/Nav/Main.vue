@@ -31,7 +31,7 @@
         
         <li>
           <RouterLink
-            to="/courses"
+            to="/"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Pitsa</RouterLink
@@ -40,7 +40,7 @@
         
         <li>
           <RouterLink
-            to="/404"
+            to="/"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Gazaklar</RouterLink
@@ -48,7 +48,7 @@
         </li>
         <li>
           <RouterLink
-            to="/404"
+            to="/"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Ichimliklar</RouterLink
@@ -57,7 +57,7 @@
         
         <li>
           <RouterLink
-            to="/404"
+            to="/"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Salatlar</RouterLink
@@ -66,7 +66,7 @@
         
         <li>
           <RouterLink
-            to="/404"
+            to="/"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Desertlar</RouterLink
@@ -75,7 +75,7 @@
         
         <li>
           <RouterLink
-            to="/404"
+            to="/"
             class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Souslar</RouterLink
@@ -84,7 +84,7 @@
         
         <li>
           <RouterLink
-            to="/404"
+            to="/"
             class="text-sm flex items-center justify-center gap-2 rounded-2xl bg-black text-white px-5 py-2  hover:text-white hover:bg-slate-900"
             @click="closeMenu"
             >Yoqtirilganlar<span class="flex items-center justify-center">0</span></RouterLink
@@ -131,7 +131,7 @@
           </li>
           <li class="mb-1">
             <RouterLink
-            to="/courses"
+            to="/"
             class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Pitsa</RouterLink
@@ -139,28 +139,28 @@
           </li>
           <li class="mb-1">
            <RouterLink
-            to="/courses"
+            to="/"
             class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Gazaklar</RouterLink>
           </li>
           <li class="mb-1">
             <RouterLink
-            to="/courses"
+            to="/"
             class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Ichimliklar</RouterLink>
           </li>
           <li class="mb-1">
             <RouterLink
-            to="/courses"
+            to="/"
             class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Salatlar</RouterLink>
           </li>
           <li class="mb-1">
             <RouterLink
-            to="/courses"
+            to="/"
             class="text-sm w-full block text-center  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
             >Desertlar</RouterLink>

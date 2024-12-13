@@ -4,7 +4,7 @@ import Nav from "./components/Nav/Main.vue";
 </script>
 
 <template>
-   <header class="sticky top-0 z-[10]">
+   <header class="sticky top-0 bg-white z-[10]">
     <nav
       class="sticky top-0 px-4  flex justify-between items-center border-b"
     >
