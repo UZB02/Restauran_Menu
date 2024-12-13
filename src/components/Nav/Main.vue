@@ -1,10 +1,7 @@
 <template>
-  <div class="container  flex mx-auto justify-between items-center">
-    <RouterLink to="/" class="text-3xl font-bold leading-none">
-      <img class="w-24" src="https://i.pinimg.com/736x/38/fa/18/38fa18f2bb82b1ced249d170436fd333.jpg" alt="" />
-    </RouterLink>
-    <div class="flex lg:py-8 py-4 flex-row-reverse">
-      <div class="lg:hidden">
+  <div class="container  flex mx-auto my-0 justify-between items-center">
+    <div class="flex lg:py-8 py-4 w-full flex-row-reverse ">
+      <div class="lg:hidden flex justify-end  w-full">
         <button class="navbar-burger bg-green-500 flex justify-center gap-2 items-center text-white rounded-lg px-4 py-2">
           <span>Menu</span>
           <svg
@@ -121,6 +118,11 @@
       </div>
       <div>
         <ul class="flex flex-col gap-3">
+          <li class="mb-1">
+              <span to="/" class="text-3xl font-bold leading-none">
+      <img class="w-24" src="https://i.pinimg.com/736x/38/fa/18/38fa18f2bb82b1ced249d170436fd333.jpg" alt="" />
+    </span>
+          </li>
           <li class="mb-1 ">
              <RouterLink
             to="/"
