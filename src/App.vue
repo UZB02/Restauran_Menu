@@ -22,7 +22,7 @@ import Nav from "./components/Nav/Main.vue";
           </div>
           <div>
             <RouterLink
-            to="/"
+            to="/likes"
             class="text-sm flex items-center justify-center gap-2 rounded-2xl bg-black text-white px-5 py-2  hover:text-white hover:bg-slate-900"
             @click="closeMenu"
             >Yoqtirilganlar<span class="flex items-center justify-center">0</span></RouterLink

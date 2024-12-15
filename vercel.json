@@ -21,6 +21,10 @@
       "dest": "/index.html"
     },
     {
+      "src": "/likes",
+      "dest": "/index.html"
+    },
+    {
       "src": "/sauces",
       "dest": "/index.html"
     }
