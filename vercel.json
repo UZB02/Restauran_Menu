@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "src": "/pitsa",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/snack",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/drinks",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/salads",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/desserts",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/sauces",
+      "dest": "/index.html"
+    }
+  ]
+}
