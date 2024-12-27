@@ -17,72 +17,14 @@
       <ul
         class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6"
       >
-        <li>
-          <RouterLink
+     <li v-for="(item, itemKey) in allcatalogues" class="mb-1 ">
+             <RouterLink
             to="/"
-            class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
+            class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
-            >Kombo</RouterLink
-          >
-        </li>
-        
-        <li>
-          <RouterLink
-            to="/pitsa"
-            class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Pitsa</RouterLink
-          >
-        </li>
-        
-        <li>
-          <RouterLink
-            to="/snack"
-            class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Gazaklar</RouterLink
-          >
-        </li>
-        <li>
-          <RouterLink
-            to="/drinks"
-            class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Ichimliklar</RouterLink
-          >
-        </li>
-        
-        <li>
-          <RouterLink
-            to="/salads"
-            class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Salatlar</RouterLink
-          >
-        </li>
-        
-        <li>
-          <RouterLink
-            to="/desserts"
-            class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Desertlar</RouterLink
-          >
-        </li>
-        
-        <li>
-          <RouterLink
-            to="/sauces"
-            class="text-sm  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Souslar</RouterLink
-          >
-        </li>
-        
-        <li>
-          
-        </li>
-        <!-- Add other menu items similarly -->
+            >{{item.name}}</RouterLink
+            >
+          </li>
       </ul>
     </div>
   </div>
@@ -113,65 +55,17 @@
       </div>
       <div>
         <ul class="flex flex-col gap-3">
-          <li class="mb-1">
-              <!-- <span to="/" class="text-3xl font-bold leading-none">
-      <img class="w-24" src="https://i.pinimg.com/736x/38/fa/18/38fa18f2bb82b1ced249d170436fd333.jpg" alt="" />
-    </span> -->
-          </li>
-          <li class="mb-1 ">
+          <li v-for="(item, itemKey) in allcatalogues" class="mb-1 ">
              <RouterLink
             to="/"
-            class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
+            class="text-sm w-full block text-center rounded-sm bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
             @click="closeMenu"
-            >Kombo</RouterLink
+            >{{item.name}}</RouterLink
             >
-          </li>
-          <li class="mb-1">
-            <RouterLink
-            to="/pitsa"
-            class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Pitsa</RouterLink
-            >
-          </li>
-          <li class="mb-1">
-           <RouterLink
-            to="/snack"
-            class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Gazaklar</RouterLink>
-          </li>
-          <li class="mb-1">
-            <RouterLink
-            to="/drinks"
-            class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Ichimliklar</RouterLink>
-          </li>
-          <li class="mb-1">
-            <RouterLink
-            to="/salads"
-            class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Salatlar</RouterLink>
-          </li>
-          <li class="mb-1">
-            <RouterLink
-            to="/desserts"
-            class="text-sm w-full block text-center  rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Desertlar</RouterLink>
-          </li>
-          <li class="mb-1">
-            <RouterLink
-            to="/sauces"
-            class="text-sm w-full block text-center rounded-2xl bg-slate-200 px-5 py-2  hover:text-white hover:bg-green-500"
-            @click="closeMenu"
-            >Souslar</RouterLink>
           </li>
           <li class="mb-1">
             <button
-              class="lg:inline-block w-full py-2 px-6 bg-black hover:bg-slate-900 text-sm text-white font-bold rounded-xl transition duration-200"
+              class="lg:inline-block w-full py-2 px-6 bg-black hover:bg-slate-900 text-sm text-white font-bold rounded-sm transition duration-200"
             >
               Yoqtirilganlar | 0
             </button>
@@ -186,8 +80,11 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { RouterLink } from "vue-router";
+import axios from "axios";
 
 const menu = ref(null);
+
+const allcatalogues = ref([]);
 
 
 function toggleMenu() {
@@ -219,5 +116,20 @@ onMounted(() => {
     backdrop.addEventListener("click", closeMenu);
   }
 });
+
+function GetCatalogues() {
+  axios
+    .get(`/api/category/`)
+    .then((response) => {
+      if (response.status == 200) {
+        allcatalogues.value = response.data.data;
+        console.log(response.data.data);
+      }
+    })
+    .catch((error) => {
+      console.error("Xatolik yuz berdi:", error);
+    });
+}
+GetCatalogues();
 </script>
 <style></style>
