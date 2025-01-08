@@ -30,7 +30,7 @@ function fetchData() {
       if (res.status == 200) {
         isloading.value = false;
         data.value = res.data.data;
-        console.log(data.value);
+        // console.log(data.value);
       } else {
         console.error("Xatolik yuz berdi status 200 emas");
       }

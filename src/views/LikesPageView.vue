@@ -22,7 +22,7 @@ function fetchData() {
  }else{
   notfound.value=true
  }
- console.log(data.value);
+//  console.log(data.value);
 }
 fetchData();
 
