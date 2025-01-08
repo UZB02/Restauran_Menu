@@ -27,7 +27,7 @@ function fetchData() {
 fetchData();
 
 function Like(id) {
-  data.value = data.value.filter((item) => item._id !== id);
+  data?.value = data?.value.filter((item) => item._id !== id);
   // showSuccess()
   fetchData()
   localStorage.setItem("likes", JSON.stringify(data.value));

@@ -14,12 +14,12 @@ const notfound = ref(false);
 
 function Like(id) {
   const product = data.value.find((item) => item._id == id);
-  if (product && !likeProducts.value.some((item) => item._id == id)) {
-    likeProducts.value.push(product); // Massivga qo'shish
-    localStorage.setItem("likes", JSON.stringify(likeProducts.value));
+  if (product && !likeProducts?.value.some((item) => item._id == id)) {
+    likeProducts?.value.push(product); // Massivga qo'shish
+    localStorage.setItem("likes", JSON.stringify(likeProducts?.value));
   } else {
-    likeProducts.value = likeProducts.value.filter((item) => item._id !== id);
-    localStorage.setItem("likes", JSON.stringify(likeProducts.value));
+    likeProducts?.value = likeProducts?.value.filter((item) => item._id !== id);
+    localStorage.setItem("likes", JSON.stringify(likeProducts?.value));
   }
 }
 
