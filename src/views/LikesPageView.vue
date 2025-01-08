@@ -10,51 +10,28 @@ import { useToast } from "primevue/usetoast";
 const toast = useToast();
 
 const searchValue = ref("");
-const isloading = ref("true");
-const data = ref([]);
+const isloading = ref(false);
+const data = ref(JSON.parse(localStorage.getItem("likes")));
 const nun = ref(false);
 
 const notfound = ref(false);
 
-function Like(id) {
-  axios
-    .post(`/api/products/like/${id}`)
-    .then((res) => {
-      if (res.status == 200) {
-        showSuccess()
-        fetchData();
-        fetchLikes()
-      } else {
-        console.error("Xatolik yuz berdi status 200 emas");
-      }
-    })
-    .catch((error) => {
-      console.error("Xatolik yuz berdi:", error);
-    });
-}
-
 function fetchData() {
-  axios
-    .get(`/api/products?liked=true`)
-    .then((res) => {
-      if (res.status == 200) {
-        isloading.value = false;
-        data.value = res.data.data;
-        if(data?.value.length===0){
-            nun.value = true;
-        }else{
-            nun.value = false;
-        }
-        console.log(data.value);
-      } else {
-        console.error("Xatolik yuz berdi status 200 emas");
-      }
-    })
-    .catch((error) => {
-      console.error("Xatolik yuz berdi:", error);
-    });
+ if(data.value.length > 0) {
+  notfound.value=false;
+ }else{
+  notfound.value=true
+ }
+ console.log(data.value);
 }
 fetchData();
+
+function Like(id) {
+  data.value = data.value.filter((item) => item._id !== id);
+  // showSuccess()
+  fetchData()
+  localStorage.setItem("likes", JSON.stringify(data.value));
+}
 
 const search = computed(() => {
   if (searchValue.value) {
@@ -73,13 +50,13 @@ const search = computed(() => {
 });
 
 
-function showSuccess() {
-  toast.add({
-    severity: "success",
-    summary: "Muvofaqqiyatli bajarildi",
-    life: 3000,
-  });
-}
+// function showSuccess() {
+//   toast.add({
+//     severity: "success",
+//     summary: "Muvofaqqiyatli bajarildi",
+//     life: 3000,
+//   });
+// }
 
 </script>
 
@@ -129,10 +106,6 @@ function showSuccess() {
             </button>
           </span>
         </div>
-
-        <div>
-          <h1 class="text-2xl font-bold">Barcha taomlar</h1>
-        </div>
         <div :class="notfound ? 'block' : 'hidden'">
           <Notfound></Notfound>
         </div>
@@ -153,28 +126,9 @@ function showSuccess() {
                 @click="Like(item._id)"
                 clip-rule="evenodd"
                 fill-rule="evenodd"
-                width="30"
-                height="30"
-                :class="item.liked ? 'hidden' : 'block'"
-                class="fill-red-500 cursor-pointer transition-all duration-150 active:scale-110"
-                stroke-linejoin="round"
-                stroke-miterlimit="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="m14.121 19.337c-.467.453-.942.912-1.424 1.38-.194.189-.446.283-.697.283s-.503-.094-.697-.283c-4.958-4.813-9.303-8.815-9.303-12.54 0-3.348 2.582-5.177 5.234-5.177 1.831 0 3.636.867 4.766 2.563 1.125-1.688 2.935-2.554 4.771-2.554 2.649 0 5.229 1.815 5.229 5.168 0 .681-.144 1.37-.411 2.072-.375-.361-.798-.673-1.258-.925.113-.393.169-.773.169-1.147 0-2.52-1.933-3.668-3.729-3.668-1.969 0-3.204 1.355-4.159 2.694-.141.197-.369.314-.612.314-.243-.001-.471-.119-.611-.317-.953-1.347-2.165-2.699-4.155-2.7-.985 0-1.937.346-2.61.95-.735.658-1.124 1.602-1.124 2.727 0 2.738 3.046 5.842 8.5 11.127.346-.336.682-.663 1.007-.981.327.383.701.724 1.114 1.014zm3.38-9.335c2.58 0 4.499 2.107 4.499 4.499 0 2.58-2.105 4.499-4.499 4.499-2.586 0-4.5-2.112-4.5-4.499 0-2.406 1.934-4.499 4.5-4.499zm.5 3.999v-1.5c0-.265-.235-.5-.5-.5-.266 0-.5.235-.5.5v1.5h-1.5c-.266 0-.5.235-.5.5s.234.5.5.5h1.5v1.5c0 .265.234.5.5.5.265 0 .5-.235.5-.5v-1.5h1.499c.266 0 .5-.235.5-.5s-.234-.5-.5-.5z"
-                  fill-rule="nonzero"
-                />
-              </svg>
-              <svg
-                @click="Like(item._id)"
-                clip-rule="evenodd"
-                fill-rule="evenodd"
                 stroke-linejoin="round"
                 width="30"
                 height="30"
-                :class="item.liked ? 'block' : 'hidden'"
                 class="fill-red-500 cursor-pointer transition-all duration-150 active:scale-110"
                 stroke-miterlimit="2"
                 viewBox="0 0 24 24"
@@ -199,6 +153,7 @@ function showSuccess() {
           </div>
         </div>
       </div>
+      <Toast style="max-width: 300px" />
     </div>
   </section>
 </template>
