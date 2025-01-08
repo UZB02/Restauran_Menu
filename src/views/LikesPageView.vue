@@ -63,7 +63,7 @@ const search = computed(() => {
 <template>
     <section class="w-full">
         <div
-        class="container flex flex-col justify-center gap-2 mx-auto my-0 py-5 xs:px-10 px-8"
+        class="container flex flex-col justify-center gap-2 mx-auto my-0 py-4 xs:px-6 px-1"
         >
         <!-- <Toast style="max-width: 300px" /> -->
       <div
@@ -77,7 +77,7 @@ const search = computed(() => {
       </div>
       <div :class="isloading ? 'hidden' : 'flex flex-col gap-2'">
         <div
-          class="flex w-full xs:flex-row flex-col justify-between items-center gap-2 mx-auto my-0"
+          class="flex bg-white sticky top-0 py-2 z-20 w-full xs:flex-row flex-col justify-between items-center gap-2 mx-auto my-0"
         >
           <span
             class="flex sm:text-3xl text-xl items-center justify-center gap-2"
