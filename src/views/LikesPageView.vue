@@ -11,7 +11,7 @@ const toast = useToast();
 
 const searchValue = ref("");
 const isloading = ref(false);
-const data = ref(JSON.parse(localStorage.getItem("likes")));
+const data = ref(JSON.parse(localStorage.getItem("likes")) ? JSON.parse(localStorage.getItem("likes")) : [] );
 const nun = ref(false);
 
 const notfound = ref(false);
